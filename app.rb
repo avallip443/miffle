@@ -12,3 +12,7 @@ end
 get '/play' do
   erb :play
 end
+
+get '/result' do
+  erb :result
+end
