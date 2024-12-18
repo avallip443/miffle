@@ -27,13 +27,12 @@ async function handleKeyPress(event) {
     currCol--;
     guesses[currRow][currCol] = "";
     updateGridCell(currRow, currCol, "");
-  }
-
-  if (currCol === maxCols) {
+  } else if (key == "ENTER" && currCol === maxCols) {
     // submit current row when 5 letters entered
     let validGuess = await submitGuess(currGuess, currRow);
-    
-    if (validGuess) {  // user inputs another guess if current one is valid
+
+    if (validGuess) {
+      // user inputs another guess if current one is valid
       currRow++;
       currCol = 0;
       currGuess = "";
@@ -103,7 +102,9 @@ function invalidGridRow(currRow) {
 }
 
 function updateKeyboard(key, status) {
-  const keyCell = document.querySelector(`.keyboard-grid .cell[data-key="${key}"]`);
+  const keyCell = document.querySelector(
+    `.keyboard-grid .cell[data-key="${key}"]`
+  );
   if (keyCell) {
     keyCell.classList.remove("correct", "present", "absent", "invalid");
     keyCell.classList.add(status);
