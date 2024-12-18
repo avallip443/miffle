@@ -296,3 +296,23 @@ a {
     border-radius: 30px;
   }
 }
+
+.correct {
+  background-color: var(--green) !important;
+  color: white !important;
+}
+
+.present {
+  background-color: var(--yellow) !important;
+  color: white !important;
+}
+
+.absent {
+  background-color: gray !important;
+  color: white !important;
+}
+
+.invalid {
+  background-color: var(--red) !important;
+  color: white !important;
+}
