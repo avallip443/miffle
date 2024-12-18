@@ -42,6 +42,9 @@ post '/guess' do
   guess = params["guess"]&.upcase
   game = session[:game]
 
+  puts "Word: #{session[:game][:target]}"
+
+
   # determine game status
   if game[:game_over]
     { error: "game over" }.to_json
@@ -60,7 +63,7 @@ post '/guess' do
       { message: "success", game: game }.to_json
     elsif game[:curr_row] >= 6
       game[:game_over] = true
-      { message: "game over, word is #{game[:target]}.", game: game }.to_json
+      { message: "fail", game: game }.to_json
     else
       { game: game }.to_json
     end

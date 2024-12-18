@@ -29,7 +29,9 @@ async function handleKeyPress(event) {
     updateGridCell(currRow, currCol, "");
   } else if (key == "ENTER" && currCol === maxCols) {
     // submit current row when 5 letters entered
-    let validGuess = await submitGuess(currGuess, currRow);
+    const { validGuess, message } = await submitGuess(currGuess, currRow);
+
+    console.log("res", validGuess, message);
 
     if (validGuess) {
       // user inputs another guess if current one is valid
@@ -37,10 +39,10 @@ async function handleKeyPress(event) {
       currCol = 0;
       currGuess = "";
     }
-  }
 
-  if (currRow >= maxRows) {
-    console.log("game over");
+    if (message) {
+      console.log("game over", message);
+    }
   }
 }
 
@@ -62,18 +64,18 @@ async function submitGuess(guess, currRow) {
 
     if (data.error) {
       invalidGridRow(currRow);
-      return false;
+      return { validGuess: false, message: null };
     } else if (Array.isArray(data.game.feedback)) {
       updateGridRow(data.game.feedback, currRow);
-      return true;
+      return { validGuess: true, message: data.message };
     } else {
       console.error("Unexpected feedback format:", data.game.feedback);
-      return false;
+      return { validGuess: false, message: null };
     }
   } catch (error) {
     console.error("Error submitting guess:", error);
     invalidGridRow(currRow);
-    return false;
+    return { validGuess: false, message: null };
   }
 }
 
