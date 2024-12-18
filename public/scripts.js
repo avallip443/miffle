@@ -82,10 +82,12 @@ function updateGridRow(feedback, currRow) {
   feedback[currRow].forEach((status, col) => {
     const currCell = currRow * maxCols + col;
     const cell = gameGrid.children[currCell];
+    const letter = guesses[currRow][col];
 
     // apply result styles
     cell.classList.remove("correct", "present", "absent", "invalid");
     cell.classList.add(status);
+    updateKeyboard(letter, status);
   });
 }
 
@@ -97,5 +99,13 @@ function invalidGridRow(currRow) {
     // apply result styles
     cell.classList.remove("correct", "present", "absent", "invalid");
     cell.classList.add("invalid");
+  }
+}
+
+function updateKeyboard(key, status) {
+  const keyCell = document.querySelector(`.keyboard-grid .cell[data-key="${key}"]`);
+  if (keyCell) {
+    keyCell.classList.remove("correct", "present", "absent", "invalid");
+    keyCell.classList.add(status);
   }
 }
