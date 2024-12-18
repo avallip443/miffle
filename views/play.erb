@@ -53,45 +53,67 @@
       </div>
       <div class="keyboard-grid">
         <div class="row1">
-          <div class="cell" data-key="Q">Q</div>
-          <div class="cell" data-key="W">W</div>
-          <div class="cell" data-key="E">E</div>
-          <div class="cell" data-key="R">R</div>
-          <div class="cell" data-key="T">T</div>
-          <div class="cell" data-key="Y">Y</div>
-          <div class="cell" data-key="U">U</div>
-          <div class="cell" data-key="I">I</div>
-          <div class="cell" data-key="O">O</div>
-          <div class="cell" data-key="P">P</div>
+          <div class="cell">Q</div>
+          <div class="cell">W</div>
+          <div class="cell">E</div>
+          <div class="cell">R</div>
+          <div class="cell">T</div>
+          <div class="cell">Y</div>
+          <div class="cell">U</div>
+          <div class="cell">I</div>
+          <div class="cell">O</div>
+          <div class="cell">P</div>
         </div>
         <div class="row2">
-          <div class="cell" data-key="A">A</div>
-          <div class="cell" data-key="S">S</div>
-          <div class="cell" data-key="D">D</div>
-          <div class="cell" data-key="F">F</div>
-          <div class="cell" data-key="G">G</div>
-          <div class="cell" data-key="H">H</div>
-          <div class="cell" data-key="J">J</div>
-          <div class="cell" data-key="K">K</div>
-          <div class="cell" data-key="L">L</div>
+          <div class="cell">A</div>
+          <div class="cell">S</div>
+          <div class="cell">D</div>
+          <div class="cell">F</div>
+          <div class="cell">G</div>
+          <div class="cell">H</div>
+          <div class="cell">J</div>
+          <div class="cell">K</div>
+          <div class="cell">L</div>
         </div>
         <div class="row3">
-          <div class="cell special-key" data-key="ENTER">ENTER</div>
-          <div class="cell" data-key="Z">Z</div>
-          <div class="cell" data-key="X">X</div>
-          <div class="cell" data-key="C">C</div>
-          <div class="cell" data-key="V">V</div>
-          <div class="cell" data-key="B">B</div>
-          <div class="cell" data-key="N">N</div>
-          <div class="cell" data-key="M">M</div>
-          <div class="cell special-key" data-key="BACKSPACE">⌫</div>
+          <div class="cell special-key">ENTER</div>
+          <div class="cell">Z</div>
+          <div class="cell">X</div>
+          <div class="cell">C</div>
+          <div class="cell">V</div>
+          <div class="cell">B</div>
+          <div class="cell">N</div>
+          <div class="cell">M</div>
+          <div class="cell special-key">⌫</div>
         </div>
       </div>
       <div class="miffy-side">
-        <img src="images/miffy-walk.png" alt="">
+        <img src="images/miffy-walk.png" alt="" />
       </div>
       <div class="home-btn"><a href="/">🏠︎</a></div>
     </div>
+
+    <div id="result-modal" class="modal">
+      <div class="modal-content fail">
+        <div class="layer2">
+          <div class="title">
+            <img src="svg/UH-OH.svg" alt="Congrats" />
+          </div>
+          <div class="result">
+            <h2>the word is:</h2>
+            <div class="answer-box"></div>
+          </div>
+          <div class="selection-btns">
+            <button><a href="">play again</a></button>
+            <button><a href="/">main menu</a></button>
+          </div>
+          <div class="miffy-result">
+            <img src="images/miffy-blue.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="scripts.js"></script>
   </body>
 </html>
