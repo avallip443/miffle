@@ -8,3 +8,7 @@ end
 get '/instructions' do
   erb :instructions
 end
+
+get '/play' do
+  erb :play
+end
