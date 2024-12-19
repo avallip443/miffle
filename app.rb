@@ -25,6 +25,17 @@ get '/instructions' do
 end
 
 get '/play' do
+  if params[:reset]
+    session[:game] = {
+      target: WORDS.sample.upcase,
+      guesses: Array.new(6) { "" },
+      feedback: Array.new(6) { [] },
+      curr_row: 0,
+      game_over: false,
+      correct_guess: false,
+    }
+  end
+  
   @target_word = session[:game][:target]
   erb :play
 end
