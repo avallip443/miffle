@@ -23,7 +23,7 @@ body {
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   text-align: center;
   margin-top: -1rem;
@@ -38,7 +38,7 @@ button {
   padding: 10px 25px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 button:hover {
@@ -225,7 +225,6 @@ a {
   justify-content: center;
 
   img {
-    width: 80%;
     height: auto;
   }
 
@@ -249,7 +248,7 @@ a {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 300px;
+  width: 380px;
   height: auto;
 }
 
@@ -257,7 +256,7 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 380px;
   height: auto;
 }
 
