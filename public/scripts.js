@@ -42,6 +42,11 @@ async function handleKeyPress(event) {
 
     if (message) {
       console.log("game over", message);
+      const modal = document.getElementById("result-modal");
+      const modal_state =  document.querySelector(".modal-content");
+
+      modal.classList.remove("hidden");
+      modal_state.classList.add(message);
     }
   }
 }

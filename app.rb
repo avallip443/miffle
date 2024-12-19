@@ -25,6 +25,7 @@ get '/instructions' do
 end
 
 get '/play' do
+  @target_word = session[:game][:target]
   erb :play
 end
 
@@ -92,4 +93,3 @@ def check_guess(guess, target)
 
   feedback
 end
-
