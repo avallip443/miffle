@@ -2,6 +2,11 @@
 
 Miffle is a Miffy-themed Wordle game where players try to guess a 5-letter word in 6 tries.
 
+## Table of Contents
+- [At a Glance](#at-a-glance)
+- [Dependencies](#dependencies)
+- [Installation](#installation)
+
 ## At a Glance
 ![image](https://github.com/user-attachments/assets/867f775f-fcd2-4d9b-9554-76c0b28df383)
 ![image](https://github.com/user-attachments/assets/7e42c334-fdb1-4773-b8a3-5744469fa783)
