@@ -28,7 +28,7 @@ The following dependencies are used:
 ```bash
 git clone https://github.com/avallip443/Miffle.git
 ```
-2. Navigate to the rroject directory
+2. Navigate to the project directory
 ```bash
 cd miffle
 ```
